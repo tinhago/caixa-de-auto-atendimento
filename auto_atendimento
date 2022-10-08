@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void) {
+  int qtd_pd,qtd,i;
+  float valor,total,geral=0;
+  char nome;
+
+    printf("Quantidade de produtos: \n");
+    scanf("%i",& qtd_pd);
+
+    for (i=0;i<qtd_pd;i++)
+      {
+        printf("\nNome do produto: \n");
+        scanf("%s", & nome);
+        printf("Valor unitário: \n");
+        scanf("%f", & valor);
+        printf("Quantidade: \n");
+        scanf("%i", & qtd);
+        total = valor * qtd;
+        printf("Valor total: %.2f\n", total);        
+        geral=geral+total;
+      }
+      printf("\nTotal geral da compra: R$%.2f", geral);
+          
+  return 0;
+}
